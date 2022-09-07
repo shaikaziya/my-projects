@@ -17,7 +17,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import CssBaseline from '@mui/material/CssBaseline';
 import Paper from '@mui/material/Paper';
 import { EditMovie } from "./EditMovie";
-
+import { BasicForm } from "./BasicForm";
 
 // const INTIAL_MOVIE_LIST = [
 //   {
@@ -172,6 +172,7 @@ export default function App() {
     <Route path="/movies/add" element={<AddMovie  />} />
     <Route path="/movies/edit/:id" element={<EditMovie  />} />
    <Route path="/color-game" element={<AddColor />} />
+   <Route path="/basic-form" element={<BasicForm />} />
      {/* <Route path="/users" element={<UserList />}/>    
     <Route path="/films" element={<Navigate replace to="/movies" />}  />  
     <Route path="/404" element={<NotFoundPage />}/>    
