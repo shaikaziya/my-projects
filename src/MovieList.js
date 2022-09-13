@@ -34,7 +34,7 @@ export function MovieList() {
           deleteButton={
             <IconButton
             onClick={()=>{
-              fetch(`${API}/movie/${mv.id}`, {
+              fetch(`${API}/movies/${mv.id}`, {
                 method: "DELETE",}) 
                 .then(() =>getMovies());   
              }}color="error" >
@@ -45,7 +45,7 @@ export function MovieList() {
             <IconButton
             onClick={()=> navigate(`/movies/edit/${mv.id}`)}
 
-              // fetch(`${API}/movie/${mv.id}`, {
+              // fetch(`${API}/movies/${mv.id}`, {
               //   method: "DELETE",}) 
               //   .then(() =>getMovies());   
             color="secondary">
