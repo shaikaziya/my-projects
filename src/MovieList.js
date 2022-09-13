@@ -14,7 +14,7 @@ export function MovieList() {
   const [movieList, setMovieList] = useState([]);
   
  const getMovies =() => {
-  fetch(`${API}/movie`,{
+  fetch(`${API}/movies`,{
     method: "GET",
   })
   .then((data) => data.json())
