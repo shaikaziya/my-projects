@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API } from "./global";
 
 export function AddMovie( { movieList, setMovieList}) {
 
@@ -40,9 +41,23 @@ export function AddMovie( { movieList, setMovieList}) {
             trailer: trailer,
           };
           //copy of movieList and add newMovie to it
-          setMovieList([...movieList, newMovie]);
-          navigate("/movies");
-        }} 
+          // setMovieList([...movieList, newMovie]);
+          // navigate("/movies");
+     
+
+        fetch(`${API}/movies`,{
+          method: "POST",
+          body: JSON.stringify(newMovie),
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+        .then((data) => data.json())
+        .then(() => navigate("/movies"));
+        //Currently post and naviagte is immediate
+        //When post is complete -> navigate/movies
+        
+      }} 
           variant="contained" >Add Movie</Button>
     
 
