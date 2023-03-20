@@ -5,7 +5,6 @@ export function AddColor() {
   // const color = "skyblue";
   const [color, setColor] = useState("orange");
   const [colorList, setColorList] = useState(["skyblue", "pink", "red","purple"]);
-
   // const colorList =["skyblue", "pink", "red","purple"]
 
   //onColor - setChange - color gets updated
