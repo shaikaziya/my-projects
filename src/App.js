@@ -174,9 +174,9 @@ export default function App() {
     <Route path="/movies/:id" element={<MovieDetails />} />
     <Route path="/movies/add" element={<AddMovie  />} />
     <Route path="/movies/edit/:id" element={<EditMovie  />} />
-   <Route path="/color-game" element={<AddColor />} />
+   {/* <Route path="/color-game" element={<AddColor />} /> */}
    <Route path="/basic-form" element={<BasicForm />} />
-   <Route path="/tic-tac-toe" element={<TicTacToe />} />
+   {/* <Route path="/tic-tac-toe" element={<TicTacToe />} /> */}
      {/* <Route path="/users" element={<UserList />}/>    
     <Route path="/films" element={<Navigate replace to="/movies" />}  />  
     <Route path="/404" element={<NotFoundPage />}/>    
